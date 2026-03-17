@@ -3,15 +3,21 @@
 //Display
 fullScreen();
 //
-String upArrow = "../../";
+String upArrow = "..";
 String dependenciesFolder = "Dependencies";
 String imagesFolder = "Images";
-String imageNAme = " Listening-To-Music-Meme";
+String imageName = " SoccerBall";
 String fileExtension = " .jpg";
 String open = "/";
 //
 // Concatenation
-// See C:\Users\k.rkie\Documents\GitHub\MusicPlayer2-2-26.github.io\Dependencies\Images
-String pathway = ;
+/*
+See Absolute Pathway C:\Users\k.rkie\Documents\GitHub\MusicPlayer2-2-26.github.io\Dependencies\Images
+ - See Relative Pathway: Dependencies/Images
+ */
+String pathway =  upArrow + open + upArrow + open +  dependenciesFolder + open + imagesFolder + open + imageName + fileExtension;
 //
-PImage image1 = loadImage(  );
+println(pathway) ;
+PImage image1 = loadImage( pathway );
+//
+image(image1, 0, 0);
