@@ -1,23 +1,33 @@
 /* Aspect Ratio
 */
+//
 //Display
 fullScreen();
 //
+String[] imageName = new String[1];
 String upArrow = "..";
-String dependenciesFolder = "Dependencies";
+String dependanciesFolder = "Dependencies";
 String imagesFolder = "Images";
-String imageName = " SoccerBall";
-String fileExtension = " .jpg";
+imageName[1] = "";
+
+String fileExension = ".jpg";
 String open = "/";
 //
 // Concatenation
-/*
-See Absolute Pathway C:\Users\k.rkie\Documents\GitHub\MusicPlayer2-2-26.github.io\Dependencies\Images
- - See Relative Pathway: Dependencies/Images
- */
-String pathway =  upArrow + open + upArrow + open +  dependenciesFolder + open + imagesFolder + open + imageName + fileExtension;
+//Note, Cut Out, See Absolute Pathway:
+//See Relative Pathway: Dependencies\Images
+String imageDirectory = upArrow + open + upArrow + open + dependanciesFolder + open + imagesFolder + open;
+String[] pathway = new String[1];
 //
-println(pathway) ;
-PImage image1 = loadImage( pathway );
+//Loading Images
+PImage[] image = new PImage[1];
+for ( int i=1; i<=pathway.length; i++ ) {}
+ pathway[i] = imageDirectory + imageName[i] + fileExension;
+ image[i] = loadImage( pathway[i] );
+
 //
-image(image1, 0, 0);
+//Drawing Images
+for ( int i=1; i<=pathway.length; i++ ) {}
+image(image[i], 0, 0);
+//
+//End
